@@ -38,7 +38,7 @@ class User implements UserInterface, \Serializable
     private $changed;
 
      /**
-     * @ORM\Column(name="nickname", type="string", length=255, unique=true)
+     * @ORM\Column(name="nickname", type="string", length=191, unique=true)
      * @Assert\NotBlank(message="user.validators.nickname")
      */
     private $nickname;
@@ -67,7 +67,7 @@ class User implements UserInterface, \Serializable
     private $password;
 
     /**
-     * @ORM\Column(name="email", type="string", length=255, unique=true)
+     * @ORM\Column(name="email", type="string", length=191, unique=true)
      * @Assert\NotBlank(message="user.validators.email")
      * @Assert\Email(message="user.validators.emailvalide")
      */
